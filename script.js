@@ -109,3 +109,129 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+var secondslideIndex = 1;
+secondshowSlides(secondslideIndex);
+
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function secondplusSlide() {
+    secondshowSlides(secondslideIndex += 1);
+}
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function secondminusSlide() {
+    secondshowSlides(secondslideIndex -= 1);  
+}
+
+/* Устанавливает текущий слайд */
+function secondcurrentSlide(b) {
+    secondshowSlides(secondslideIndex = b);
+}
+
+/* Основная функция слайдера */
+function secondshowSlides(b) {
+    var a;
+    var secondslides = document.getElementsByClassName("secondItem");
+    if (b > secondslides.length) {
+        secondslideIndex = 1
+    }
+    if (b < 1) {
+        secondslideIndex = secondslides.length
+    }
+    for (a = 0; a < secondslides.length; a++) {
+        secondslides[a].style.display = "none";
+    }
+    secondslides[secondslideIndex - 1].style.display = "block";
+}
+var slideIndexThree = 1; 
+showSlidesThree(slideIndexThree); 
+ 
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/ 
+function plusSlideThree() { 
+    showSlidesThree(slideIndexThree += 1); 
+} 
+ 
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/ 
+function minusSlideThree() { 
+    showSlidesThree(slideIndexThree -= 1);   
+} 
+ 
+/* Устанавливает текущий слайд */ 
+function currentSlideThree(n) { 
+    showSlidesThree(slideIndexThree = n); 
+} 
+ 
+/* Основная функция слайдера */ 
+function showSlidesThree(n) { 
+    var i; 
+    var slides = document.getElementsByClassName("achievements__slider--block"); 
+    if (n > slides.length) { 
+      slideIndexThree = 1 
+    } 
+    if (n < 1) { 
+        slideIndexThree = slides.length 
+    } 
+    for (i = 0; i < slides.length; i++) { 
+        slides[i].style.display = "none"; 
+    }
+    slides[slideIndexThree - 1].style.display = "flex"; 
+}
+
+let qstBtnOne = document.querySelector("#qstBtnOne")
+let hidetxtOne = document.querySelector("#hidetxtOne")
+
+let qstBtnTwo = document.querySelector("#qstBtnTwo")
+let hidetxtTwo = document.querySelector("#hidetxtTwo")
+
+let qstBtnThree = document.querySelector("#qstBtnThree")
+let hidetxtThree = document.querySelector("#hidetxtThree")
+
+let qstBtnFour = document.querySelector("#qstBtnFour")
+let hidetxtFour = document.querySelector("#hidetxtFour")
+
+let qstBtnFive = document.querySelector("#qstBtnFive")
+let hidetxtFive = document.querySelector("#hidetxtFive")
+
+let qstBtnSix = document.querySelector("#qstBtnSix")
+let hidetxtSix = document.querySelector("#hidetxtSix")
+
+qstBtnOne.addEventListener('click', function () {
+    qstBtnOne.classList.toggle('question__pic-Revers')
+    hidetxtOne.classList.toggle('visible')
+})
+qstBtnTwo.addEventListener('click', function () {
+    qstBtnTwo.classList.toggle('question__pic-Revers')
+    hidetxtTwo.classList.toggle('visible')
+})
+qstBtnThree.addEventListener('click', function () {
+    qstBtnThree.classList.toggle('question__pic-Revers')
+    hidetxtThree.classList.toggle('visible')
+})
+qstBtnFour.addEventListener('click', function () {
+    qstBtnFour.classList.toggle('question__pic-Revers')
+    hidetxtFour.classList.toggle('visible')
+})
+qstBtnFive.addEventListener('click', function () {
+    qstBtnFive.classList.toggle('question__pic-Revers')
+    hidetxtFive.classList.toggle('visible')
+})
+qstBtnSix.addEventListener('click', function () {
+    qstBtnSix.classList.toggle('question__pic-Revers')
+    hidetxtSix.classList.toggle('visible')
+})
+
+
+function toggleButton(){
+        var username = document.getElementById('username').value;
+        var number = document.getElementById('number').value;
+ 
+        if (username && number) {
+            alert('a')
+            document.getElementById('submitButton').disabled = false;
+        } else {
+            alert('b')
+             document.getElementById('submitButton').disabled = true;
+        }
+}
+
+

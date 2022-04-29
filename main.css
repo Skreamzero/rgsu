@@ -1,5 +1,8 @@
 /*  */
-
+a{
+    text-decoration: none;
+    color: #000;
+}
 *{
     font-family: "Arial Обычный", Arial, sans-serif;
     font-weight: 400;
@@ -24,13 +27,14 @@ ul{
 }
 /* HEADER */
 header{
-    border-bottom: 2px solid gray;
+    border-bottom: 10px solid #3467A0;
 }
 /* MENU */
 .menu{
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    padding-bottom: 30px;
     margin-left: 50px;
     margin-right: 50px;
     font-size: 20px;
@@ -46,7 +50,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    text-align: center;
 }
 .menu_nav-btn{
     color: #333333;
@@ -69,7 +73,6 @@ header{
 }
 .menu_info{
     padding-top: 20px;
-    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -184,15 +187,14 @@ header{
     margin-top: 40px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .block_item-pic{
-    width: 350px;
+    width: 70%;
 }
-.block_item-btn{
-    margin-left: 15%;
+.block_item-btn{    
     margin-top: 20px;
-    width: 249px;
-    height: 59px;
+    padding: 10px 40px;
     background-color: rgba(52, 103, 160, 1);
     box-sizing: border-box;
     border-width: 1px;
@@ -202,6 +204,7 @@ header{
     color: #FEFEFE;
 }
 .block_item-btn:hover{
+    cursor: pointer;
     background-color: #5c87b9;
 }
 .block_item-text{
@@ -220,8 +223,11 @@ header{
 }
 .block{
     padding-bottom: 50px;
-    
-}   
+    align-items: center;
+}  
+.second__item{
+    height: 300px;
+}
 .block_item-title{
     margin-top: 20px;
     font-family: "Arial Полужирный", "Arial Обычный", Arial, sans-serif;
@@ -391,6 +397,7 @@ table{
     padding-top: 20px;
 }
 .visible{
+
     display: none;
 }
 .opacity{
@@ -413,7 +420,7 @@ table{
     height: 260px;
     display: flex;
     flex-direction: column;
-
+    transition: 800ms;
     align-items: center;
 }
 .block_one:hover{
@@ -521,6 +528,9 @@ table{
 .about__teaher{
     margin-top: 30px
 }
+.about__main-teaher{
+    font-size: 20px;
+}
 .teaher__pic{
     width: 333px;
 }
@@ -533,9 +543,15 @@ table{
     display: flex;
     flex-direction: row;
     margin-top: 40px;
-    margin-left: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.main__teaher-name{
+    font-weight: 700;
+    font-size: 28px;
 }
 .main__teaher-block{
+    
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -569,13 +585,6 @@ table{
 .training__text{
     height: 100%;
 }
-/* Собственно сам слайдер */
-.slider{
-    max-width: 90%;
-    position: relative;
-    margin: auto;
-    margin-bottom: 15px;
-}
 /* Картинка мастабируется по отношению к родительскому элементу */
 .slider .item img {
     object-fit: cover;
@@ -593,7 +602,7 @@ table{
     margin-left: -80px;
     margin-right: -80px;
     width: auto;
-    margin-top: 150px;
+    margin-top: 110px;
     padding: 16px;
     color: black;
     font-weight: bold;
@@ -677,4 +686,451 @@ table{
     font-size: 35px;
     text-align: center;
     padding-bottom: 20px;  
+}
+
+/* choice */
+
+.choice{
+    margin-top: 50px;
+}
+.secodItem{
+    display: flex;
+    justify-content: center;
+}
+.secondItem__block{
+    padding-top: 10px;
+    height: 310px;
+    padding-left: 45%;
+    background-color: #EDEEEF;
+}
+.main{
+    margin-bottom: 15px;
+}
+.quote{
+    font-style: italic;
+}
+.main__title{
+    font-weight: 700;
+    font-size: 28px;
+}
+.main__text{
+    font-weight: 400;
+    font-size: 28px;
+}
+.item__pic{
+    width: auto;
+}
+/* Собственно сам слайдер */
+.secondslider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.secondslider .secondItem {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* Кнопки вперед и назад */
+.secondslider .secondprev, .secondslider .secondnext{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    margin-left: -70px;
+    margin-right: -70px;
+    width: auto;
+    margin-top: 80px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 100px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.secondslider{
+    margin-top: 100px;
+}
+.secondslider .secondnext{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* Анимация слайдов */
+.secondslider .secondItem {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.achievements{
+    margin-top: 50px;
+}
+.achievements__slider{
+    margin-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+.achievements__slider--block {
+    justify-content: space-around;
+    width: 1000px;
+    height: 410px;
+}
+
+.achievements__slider--left,
+.achievements__slider--right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.achievements__slider--img {
+    width: 414px;
+    height: 249px;
+}
+
+.achievements__slider--text {
+    text-align: center;
+    margin-top: 20px;
+}
+.thirdslider .thirdprev, .thirdslider .thirdnext{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    margin-left: 70px;
+    margin-right: -70px;
+    width: auto;
+    margin-top: 80px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 100px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    transition: 300ms;
+}
+.choice__slider--pic {
+    width: 29px;
+    cursor: pointer;
+    transition: 300ms;
+}
+.choice__slider--pic:hover {
+    width: 35px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+/* education */
+
+.education{
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #edeeef;
+}
+.education__block-item{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.education__text{
+    margin-left: 20px;
+}
+
+.question{
+    margin-top: 100px;
+}
+.question__pic{
+    transition: 300ms;
+    transform: rotate(90deg);
+}
+.question__pic-Revers{
+    transition: 300ms;
+    transform: rotate(-180deg);
+}
+.question__block{
+    margin: 50px 40px;
+}
+.question__block-item{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+    border: 2px solid black;
+    background-color: white;
+}
+.question__btn{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+.question__hide-text{    
+    border: 2px solid black;
+    border-top: 0px solid white;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.format{
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    background-color: #fefefe;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.format__info{
+    display: flex;
+    flex-direction: column;
+    
+}
+.format__input{
+   width: 50%;
+   height: 50px;
+   font-size: 20px;
+   border: 0px solid #fefefe;
+   border-bottom: 1px solid black;
+   margin-bottom: 40px;
+}
+.format__input:focus{
+    outline: 0px;
+    -moz-outline-radius-topleft: 0px;
+}
+.format__btn{
+    background-color: #3467A0;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    color: #fefefe;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* location */
+
+.location{
+    background-color: #edeeef;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    margin: 150px 100px 0px 100px;
+}
+.location__title{
+    font-weight: 700;
+    font-size: 36px;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+
+}
+.space{
+    margin-bottom: 30px;
+}
+.location__icon{
+    display: flex;
+}
+.location__icon-you{
+    width: 40px;
+    height: 40px;
+}
+.location__icon-vk{
+    width: 30px;
+    height: 30px;
+}
+.location__icon-a{
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+.footer_nav-ad{
+    padding-bottom: 10px;
+}
+footer{
+    border-top: 10px solid #3467A0;
+    margin-top: 50px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width:1500px) {
+    .head__title{
+        font-size: 28px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .about{
+        font-size: 16px;
+        padding: 0px;
+    }
+    .about_block{   
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: 18px;
+    }
+    .about_pic{
+        height: 40px;
+        margin-right: 10px;
+    }
+    .first{
+        margin-top: 40px;
+    }
+    .first_block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .left{
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .right{
+        margin-top: 40px;
+   
+    }
+    .right_pic{
+        width: 100%;
+    }
+    .first_btn{
+        font-size: 16px;    
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        background:#3467A0;
+        width: 70%;
+        height: 56px;
+        border-radius: 5px;
+    }
+    .right_btn{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 10px 50px;
+        background:#3467A0;
+        border-radius: 5px;
+    }
+    .right_btn-pic{
+        height: 70%;
+        margin-right: 10px;
+    }
+    .img{
+        width: 70%;
+    }
+    .second__item{
+        height: auto;
+    }
+    .block{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .block_item{
+        margin-top: 40px;
+        display: flex;
+        width: 70%;
+        align-items: center;
+    }
+  }
+  @media (max-width:360px) {
+    *{
+        font-family: "Arial Обычный", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .block{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+  }
+  @media(max-width: 767px){
+    .menu-burger__header {
+        position: relative; /* задаем относительное позиционирование */
+        width: 40px; /* определяем размеры блока */
+        height: 35px;
+        display: block;
+        margin-left: 10px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+        .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            background: #515758;
+            margin: 0 auto;
+        }
+        .menu-burger__header span{
+            top: 21px;
+        }
+        .menu-burger__header:after, .menu-burger__header:before{
+            content: '';
+        }
+        .menu-burger__header:after{
+            bottom: 5px;
+        }
+        .menu-burger__header:before{
+            top: 5px;
+        }
+        .menu_nav {
+            display: none;
+        }
+}
+@media(max-width: 767px){
+
 }
